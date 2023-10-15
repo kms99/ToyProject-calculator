@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    background:  linear-gradient(rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)), url('./image/background.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.calc-wrapper{
+    width: 60%;
+    min-width: 35rem;
+    max-width: 55rem;
+}
+
+.calc-header{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 5rem 0;
+    
+}
+.calc-header__title{
+    display: inline-block;
+    background-color: #3d3d3d;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    border: 3px solid black;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+.calc-mainContainer{
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: #3d3d3d;
+    box-shadow: 2px 2px 4px 2px gray;
+}
+.calc-mainContainer__field{
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.calc-mainContainer__userInput{
+    font-size: 3rem;
+    text-align: right;
+    height: 5rem;
+    background-color: #033b0349;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    line-height: 5rem;
+    font-style: italic;
+    font-weight: bold;
+    word-break: break-all;
+    height: auto;
+}
+.calc-mainContainer__userInput span{
+    /* word-break: break-all; */
+}
+
+.calc-mainContainer__section{
+    display: grid;
+    /* grid-template 축약표현 가능 grid-template : columns / rows */
+    grid-template: repeat(5,5rem) / repeat(4,1fr);
+    /* 지정한 요소의 이름을 통해 배치 */
+    grid-template-areas: 
+    'del del c div'
+    'sev eig nin mul'
+    'fou fiv six min'
+    'one two thr plu'
+    'zer zer dot_ equ'
+    ;
+    gap: 5px;
+}
+.calc-mainContainer__buttonArea:nth-child(1){
+    /* grid-area에 배치할 요소의 식별자(이름) 지정 */
+    grid-area: del;
+}
+.calc-mainContainer__buttonArea:nth-child(2){
+    grid-area: c;
+}
+.calc-mainContainer__buttonArea:nth-child(3){
+    grid-area: zer;
+}
+.calc-mainContainer__buttonArea:nth-child(4){
+    grid-area: one;
+}
+.calc-mainContainer__buttonArea:nth-child(5){
+    grid-area: two;
+}
+.calc-mainContainer__buttonArea:nth-child(6){
+    grid-area: thr;
+}
+.calc-mainContainer__buttonArea:nth-child(7){
+    grid-area: fou;
+}
+.calc-mainContainer__buttonArea:nth-child(8){
+    grid-area: fiv;
+}
+.calc-mainContainer__buttonArea:nth-child(9){
+    grid-area: six;
+}
+.calc-mainContainer__buttonArea:nth-child(10){
+    grid-area: sev;
+}
+.calc-mainContainer__buttonArea:nth-child(11){
+    grid-area: eig;
+}
+.calc-mainContainer__buttonArea:nth-child(12){
+    grid-area: nin;
+}
+.calc-mainContainer__buttonArea:nth-child(13){
+    grid-area: dot_;
+}
+.calc-mainContainer__buttonArea:nth-child(14){
+    grid-area: div;
+}
+.calc-mainContainer__buttonArea:nth-child(15){
+    grid-area: mul;
+}
+.calc-mainContainer__buttonArea:nth-child(16){
+    grid-area: min;
+}
+.calc-mainContainer__buttonArea:nth-child(17){
+    grid-area: plu;
+}
+
+.calc-mainContainer__button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #00000080;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+}
